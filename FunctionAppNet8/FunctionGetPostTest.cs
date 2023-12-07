@@ -5,16 +5,16 @@ using Microsoft.Extensions.Logging;
 
 namespace FunctionAppNet8
 {
-    public class Function1
+    public class FunctionGetPostTest
     {
         private readonly ILogger _logger;
 
-        public Function1(ILoggerFactory loggerFactory)
+        public FunctionGetPostTest(ILoggerFactory loggerFactory)
         {
-            _logger = loggerFactory.CreateLogger<Function1>();
+            _logger = loggerFactory.CreateLogger<FunctionGetPostTest>();
         }
 
-        [Function("Function1")]
+        [Function("FunctionGetPostTest")]
         public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");

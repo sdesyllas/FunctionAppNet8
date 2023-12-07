@@ -30,7 +30,7 @@ namespace FunctionAppNet8
         {
             ILogger logger = executionContext.GetLogger("SayHello");
             logger.LogInformation("Saying hello to {name}.", name);
-            Thread.Sleep(60000);
+            Thread.Sleep(20000);
             return $"Hello {name}!";
         }
 
